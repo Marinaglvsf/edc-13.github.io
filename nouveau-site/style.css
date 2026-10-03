@@ -4,3 +4,5 @@
 .photo-zoom{padding:0;border:0;border-radius:12px;background:#e8edde;cursor:zoom-in}.photo-zoom img{display:block}#photo-dialog{width:min(1200px,96vw);padding:50px 12px 12px;background:#18251d}#large-photo{display:block;width:100%;height:calc(85vh - 65px);object-fit:contain}#close-photo{position:absolute;right:12px;top:8px;border:0;border-radius:50%;width:36px;height:36px;font-size:26px;background:white;color:#283b30;cursor:pointer}
 
 #large-photo{max-width:100%;max-height:calc(85vh - 65px);margin:auto;object-fit:contain}
+
+.hero-photo{padding-bottom:20px}.hero-photo small{position:static;display:block;margin:14px 10px 0;line-height:1.4;overflow-wrap:anywhere}
