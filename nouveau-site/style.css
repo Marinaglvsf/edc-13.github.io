@@ -6,3 +6,5 @@
 #large-photo{max-width:100%;max-height:calc(85vh - 65px);margin:auto;object-fit:contain}
 
 .hero-photo{padding-bottom:20px}.hero-photo small{position:static;display:block;margin:14px 10px 0;line-height:1.4;overflow-wrap:anywhere}
+
+footer .social-links strong{font-family:Arial,sans-serif;font-size:16px}footer .social-links a{padding:8px 14px;border:1px solid #ffffff80;border-radius:20px;text-decoration:none;min-height:44px}footer .social-links a:hover{background:#ffffff18}
