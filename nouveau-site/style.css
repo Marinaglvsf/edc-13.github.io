@@ -43,3 +43,8 @@ nav a.active,nav a:hover{border-color:var(--sun)}
 .share-picker summary::-webkit-details-marker{display:none}
 .share-picker[open] .share-actions{padding:12px;background:white;border:1px solid #d4e4eb;border-radius:16px}
 @media(max-width:760px){nav{gap:8px}nav a{font-size:13px;padding:10px 16px}}
+
+/* Menu sur une ligne ; défilement uniquement dans le menu si nécessaire. */
+#menu{flex-wrap:nowrap;justify-content:center;gap:6px;padding:12px 14px;overflow-x:auto}
+#menu a{flex:0 0 auto;white-space:nowrap;font-size:14px;padding:10px 12px}
+@media(max-width:1100px){#menu{justify-content:flex-start}#menu a{padding:10px 8px}}
