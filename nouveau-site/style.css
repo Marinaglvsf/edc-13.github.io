@@ -31,3 +31,8 @@ nav a.active,nav a:hover{background:var(--sun);color:#173744}
 @media(max-width:760px){.hero{grid-template-columns:1fr;gap:22px}.hero-photo{width:100%;max-width:350px;justify-self:center}.hero-photo img{height:230px}.hero h1{font-size:36px}}
 
 .support .button:not(.secondary){background:var(--blue);border-color:var(--blue);color:#fff}
+
+.news-sharing{margin-top:22px;border-top:1px solid #2f638630;padding-top:18px}
+.news-sharing>span{font-size:14px;font-weight:bold}.share-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+.share-actions .button{font-size:13px;padding:9px 16px}.share-actions button[hidden]{display:none}
+.share-feedback{font-size:13px;overflow-wrap:anywhere}.share-feedback:empty{display:none}
