@@ -52,3 +52,9 @@ nav a.active,nav a:hover{border-color:var(--sun)}
 #menu{overflow-x:visible;gap:4px;padding:12px 8px;justify-content:center}
 #menu a{font-size:var(--menu-font,14px);padding:10px var(--menu-padding,8px);min-width:0}
 @media(max-width:600px){#menu{gap:2px;padding:10px 4px}#menu a{padding-top:8px;padding-bottom:8px}}
+
+.support-access{flex:0 0 240px;display:flex;flex-direction:column;gap:14px}
+.support-links{display:flex;flex-wrap:wrap;gap:9px}.support-access .support-links{flex-direction:column}
+.support-links .button{font-size:13px;padding:9px 15px;text-align:center}
+#soutenir-refuge{margin:28px 0;padding:24px;background:var(--panel-warm);border-radius:20px}
+@media(max-width:760px){.support-access{margin-top:20px}.support-access .support-links{flex-direction:row}}
