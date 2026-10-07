@@ -37,3 +37,22 @@ const editorial={actualite:['La vie du refuge',"Retrouvez les nouvelles du refug
 function render(){if(dialog.open)dialog.close();const requested=location.hash.slice(1)||'bienvenue';const key=requested==='visite'?'refuge':requested==='actions'?'association':requested;const selected=sections.find(s=>s[0]===key)||(key==='aider'?['aider','Aider le refuge']:sections[0]);document.querySelector('nav').innerHTML=sections.map(([id,label])=>`<a href="#${id}" ${id===selected[0]?'class="active" aria-current="page"':''}>${esc(label)}</a>`).join('');document.title=selected[1]+' — L’École du Chat Phocéenne';if(selected[0]==='bienvenue')home();else if(selected[0]==='adopter'||selected[0]==='adoptes')listing(selected[0]==='adoptes');else{const [title,text]=editorial[selected[0]];main.innerHTML=`<section class="editorial"><span class="eyebrow">${esc(selected[1])}</span><h1>${title}</h1><p>${text}</p>${selected[0]==='association'?'<section id="nos-actions"><h2>Nos actions</h2><p>Découvrez les actions de l’association en faveur des chats libres et des chats du refuge.</p><p>Les informations sur nos actions seront regroupées ici.</p></section>':''}<div class="panel"><h2>${selected[0]==='aider'?'Adopter · Donner · Participer':'Le refuge vous ouvre ses portes'}</h2><p>Cette rubrique sera complétée avec le contenu du site actuel. Sa présentation et sa place dans le menu sont conservées dans cette maquette.</p><a class="button" href="https://ecole-du-chat-phoceenne.org/" target="_blank" rel="noopener">Consulter le site actuel ↗</a></div><a href="#adopter">Rencontrer nos chats →</a>${selected[0]==='actualite'?newsSharing():''}</section>`;bindNewsSharing()}window.scrollTo(0,0)}window.addEventListener('hashchange',render);render();
 
 const photoDialog=document.querySelector("#photo-dialog");document.querySelector("#close-photo").onclick=()=>photoDialog.close();photoDialog.addEventListener("click",event=>{if(event.target===photoDialog)photoDialog.close()});
+
+function fitMenu(){
+ const menu=document.querySelector('#menu');
+ menu.style.setProperty('--menu-font','14px');menu.style.setProperty('--menu-padding','8px');
+ const links=[...menu.querySelectorAll('a')];if(!links.length)return;
+ const style=getComputedStyle(menu);
+ const available=menu.clientWidth-parseFloat(style.paddingLeft)-parseFloat(style.paddingRight);
+ const gap=parseFloat(style.columnGap)||0;
+ // Réduire d’abord les espaces, puis la typographie, sans retour à la ligne.
+ menu.style.setProperty('--menu-padding',innerWidth<600?'2px':'4px');
+ for(let size=14;size>=4;size-=0.25){
+  menu.style.setProperty('--menu-font',size+'px');
+  const total=links.reduce((sum,a)=>sum+a.getBoundingClientRect().width,0)+gap*(links.length-1);
+  if(total<=available)break;
+ }
+}
+window.addEventListener('resize',fitMenu);
+window.addEventListener('hashchange',fitMenu);
+fitMenu();
