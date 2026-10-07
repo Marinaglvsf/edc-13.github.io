@@ -58,3 +58,5 @@ nav a.active,nav a:hover{border-color:var(--sun)}
 .support-links .button{font-size:13px;padding:9px 15px;text-align:center}
 #soutenir-refuge{margin:28px 0;padding:24px;background:var(--panel-warm);border-radius:20px}
 @media(max-width:760px){.support-access{margin-top:20px}.support-access .support-links{flex-direction:row}}
+
+header{background:var(--panel-warm)}header .banner{mix-blend-mode:multiply}
