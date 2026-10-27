@@ -59,3 +59,7 @@ nav a.active,nav a:hover{border-color:var(--sun)}
 #soutenir-refuge{margin:28px 0;padding:24px;background:var(--panel-warm);border-radius:20px}
 @media(max-width:760px){.support-access{margin-top:20px}.support-access .support-links{flex-direction:row}}
 
+
+.refuge-event{display:grid;grid-template-columns:minmax(160px,260px) minmax(0,1fr);gap:30px;align-items:start;margin-top:20px}
+.event-poster img{display:block;width:100%;height:auto;border-radius:14px}.refuge-event h3{margin-top:8px;font-size:30px}.refuge-event p{font-size:16px}.event-date{color:var(--blue)}
+@media(max-width:600px){.refuge-event{grid-template-columns:1fr;gap:20px}.event-poster{max-width:280px;justify-self:center}.refuge-event h3{font-size:26px}}
