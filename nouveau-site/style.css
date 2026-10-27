@@ -84,3 +84,5 @@ nav a.active,nav a:hover{border-color:var(--sun)}
 .refuge-story a{overflow-wrap:anywhere}
 @media(min-width:761px){.refuge-story{margin-left:50px;max-width:min(780px,calc(100% - 50px))}}
 @media(max-width:600px){.volunteer-panel{padding:20px}}
+
+.refuge-gallery-pending{padding:18px 22px;border:1px dashed #8baaba;border-radius:16px;background:var(--sky)}.refuge-gallery-pending p{margin:0}
