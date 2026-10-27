@@ -76,3 +76,11 @@ nav a.active,nav a:hover{border-color:var(--sun)}
 
 .association-story h1,.association-story h2{font-size:30px}
 @media(min-width:761px){.association-story{margin-left:50px;max-width:min(780px,calc(100% - 50px))}}
+
+.refuge-story h1,.refuge-story h2{font-size:30px}
+.refuge-story p,.refuge-story address{font-size:16px;line-height:1.65}
+.refuge-story>section{margin-top:32px}
+.volunteer-panel{padding:28px;background:var(--panel-warm);border-radius:20px}
+.refuge-story a{overflow-wrap:anywhere}
+@media(min-width:761px){.refuge-story{margin-left:50px;max-width:min(780px,calc(100% - 50px))}}
+@media(max-width:600px){.volunteer-panel{padding:20px}}
