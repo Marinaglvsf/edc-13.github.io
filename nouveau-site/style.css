@@ -65,3 +65,6 @@ nav a.active,nav a:hover{border-color:var(--sun)}
 @media(max-width:600px){.refuge-event{grid-template-columns:1fr;gap:20px}.event-poster{max-width:280px;justify-self:center}.refuge-event h3{font-size:26px}}
 
 .association-story>section{margin-top:36px}.association-story li{margin:14px 0;line-height:1.7}.appointment address{font-style:normal;line-height:1.7}.association-story h2{font-size:clamp(27px,3vw,36px)}
+
+.refuge-event{grid-template-columns:minmax(240px,380px) minmax(0,1fr)}
+@media(max-width:600px){.refuge-event{grid-template-columns:minmax(0,1fr)}.event-poster{width:100%;max-width:none;justify-self:stretch}}
